@@ -1,9 +1,10 @@
 service: gemstash
-
 image: itsterry/gemstash
 
 servers:
-  - 13.40.110.215
+  web:
+    hosts:
+      - 13.40.110.215
 
 proxy:
   ssl: true
