@@ -1,0 +1,27 @@
+service: gemstash
+
+image: itsterry/gemstash
+
+servers:
+  - 13.40.110.215
+
+proxy:
+  ssl: true
+  host: gemstash.morsedigital.com
+
+registry:
+  username: itsterry
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+ssh:
+  user: gemstash
+
+volumes:
+  - /var/www/gemstash:/data
+
+builder:
+  arch: amd64
+  cache:
+    type: registry
+    options: mode=max
