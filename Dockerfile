@@ -7,10 +7,9 @@ COPY Gemfile* ./
 RUN bundle install
 
 COPY . .
-COPY config.ru /app/config.ru
 
 VOLUME /data
 
 EXPOSE 9292
 
-CMD ["rackup", "/app/config.ru", "-p", "9292", "-E", "production"]
+CMD ["gemstash", "start", "--no-daemonize"]
