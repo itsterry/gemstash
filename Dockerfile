@@ -7,9 +7,15 @@ COPY Gemfile* ./
 RUN bundle install
 
 COPY . .
+COPY config.ru /app/config.ru
+COPY config.yml /app/config.yml
 
 VOLUME /data
 
 EXPOSE 9292
 
-CMD ["gemstash", "start", "--no-daemonize"]
+ENV GEMSTASH_CACHE=/data/cache
+ENV GEMSTASH_STORAGE=/data/storage
+ENV GEMSTASH_CONFIG=/app/config.yml
+
+CMD ["rackup", "/app/config.ru", "-p", "9292", "-E", "production"]

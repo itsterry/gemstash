@@ -1,6 +1,4 @@
-# config.yml
-:cache_type: memory
-:base_path: /data
-:db_adapter: sqlite3
-:db_path: /data/gemstash.db
-:rubygems_url: https://rubygems.org
+:upstream: https://rubygems.org
+:dependency_api_enabled: false
+:cache_dir: /data/cache
+:storage_dir: /data/storage

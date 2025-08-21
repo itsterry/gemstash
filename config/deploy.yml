@@ -1,6 +1,5 @@
 service: gemstash
 image: itsterry/gemstash
-port: 9292
 
 servers:
   web:
@@ -10,6 +9,9 @@ servers:
 proxy:
   ssl: true
   host: gemstash.morsedigital.com
+  app_port: 9292
+  healthcheck:
+    path: /health
 
 registry:
   username: itsterry
@@ -21,6 +23,11 @@ ssh:
 
 volumes:
   - /var/www/gemstash:/data
+
+env:
+  clear:
+    GEMSTASH_CACHE: /data/cache
+    GEMSTASH_STORAGE: /data/storage
 
 builder:
   arch: amd64
