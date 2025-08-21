@@ -1,4 +1,5 @@
 source "https://rubygems.org"
 
-gem "gemstash"
-gem "kamal"
+gem "gemstash", "~> 2.7.1"
+gem "rack"
+gem "puma"

@@ -1,8 +1,6 @@
 require "gemstash"
 require "rack"
 
-Gemstash::Env.config_file = File.expand_path("config.yml", __dir__)
-
 gemstash_app = Gemstash::Web
 
 health_app = proc do |env|
@@ -18,9 +16,9 @@ stats_app = proc do |env|
 end
 
 run Rack::URLMap.new(
-  "/up"   => health_app,
-  "/"     => root_app,
+  "/up"    => health_app,
+  "/"      => root_app,
   "/stats" => stats_app,
-  "/gems" => gemstash_app,
-  "/api"  => gemstash_app
+  "/gems"  => gemstash_app,
+  "/api"   => gemstash_app
 )

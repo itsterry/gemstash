@@ -28,6 +28,8 @@ env:
   clear:
     GEMSTASH_CACHE: /data/cache
     GEMSTASH_STORAGE: /data/storage
+    GEMSTASH_UPSTREAM: https://rubygems.org
+    GEMSTASH_DEPENDENCY_API_ENABLED: false
 
 builder:
   arch: amd64
