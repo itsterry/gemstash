@@ -1,5 +1,6 @@
 service: gemstash
 image: itsterry/gemstash
+port: 9292
 
 servers:
   web:
