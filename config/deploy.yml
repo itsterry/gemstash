@@ -11,7 +11,7 @@ proxy:
   host: gemstash.morsedigital.com
   app_port: 9292
   healthcheck:
-    path: /health
+    path: /up
 
 registry:
   username: itsterry
