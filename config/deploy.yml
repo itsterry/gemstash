@@ -4,7 +4,7 @@ image: itsterry/gemstash
 servers:
   web:
     hosts:
-      - 13.40.110.215
+      - 35.177.246.4
 
 proxy:
   ssl: true
@@ -18,8 +18,8 @@ registry:
   password:
     - KAMAL_REGISTRY_PASSWORD
 
-ssh:
-  user: gemstash
+# ssh:
+#   user: gemstash
 
 volumes:
   - /var/www/gemstash:/data
