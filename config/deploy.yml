@@ -21,6 +21,10 @@ registry:
 # ssh:
 #   user: gemstash
 
+aliases:
+  logs: app logs -f
+  shell: app exec --interactive --reuse "bash"
+
 volumes:
   - /var/www/gemstash:/data
 
