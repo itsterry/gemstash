@@ -26,14 +26,7 @@ aliases:
   shell: app exec --interactive --reuse "bash"
 
 volumes:
-  - /var/www/gemstash:/data
-
-env:
-  clear:
-    GEMSTASH_CACHE: /data/cache
-    GEMSTASH_STORAGE: /data/storage
-    GEMSTASH_UPSTREAM: https://rubygems.org
-    GEMSTASH_DEPENDENCY_API_ENABLED: false
+  - /var/www/gemstash:/root/.gemstash
 
 builder:
   arch: amd64
