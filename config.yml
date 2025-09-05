@@ -1,4 +1,6 @@
 :upstream: https://rubygems.org
-:dependency_api_enabled: false
+:dependency_api_enabled: true
 :cache_dir: /data/cache
 :storage_dir: /data/storage
+:protected_fetch: true
+:base_path: /private
