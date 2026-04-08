@@ -12,4 +12,4 @@ VOLUME /data
 
 EXPOSE 9292
 
-CMD ["gemstash", "start", "--no-daemonize"]
+CMD ["gemstash", "start", "--no-daemonize", "--config-file", "/app/config.yml"]
