@@ -3,4 +3,5 @@
 :cache_dir: /data/cache
 :storage_dir: /data/storage
 :protected_fetch: true
-:base_path: /private
+:base_path: /data
+:db_checksum_validations: true

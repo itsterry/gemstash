@@ -26,7 +26,7 @@ aliases:
   shell: app exec --interactive --reuse "bash"
 
 volumes:
-  - /var/www/gemstash:/root/.gemstash
+  - /var/www/gemstash:/data
 
 builder:
   arch: amd64
